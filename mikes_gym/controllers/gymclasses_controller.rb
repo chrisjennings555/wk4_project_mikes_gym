@@ -4,6 +4,7 @@ require('pry-byebug')
 require_relative('../models/gymclass.rb')
 also_reload('../models/*')
 
-get '/gymclass' do
-  @gymclasses = Gymclass.all
+get '/gymclasses' do
+  @gymclasses = GymClass.all()
+  erb(:"gymclasses/index")
 end

@@ -1,1 +1,6 @@
 <h1>Classes</h1>
+<% @gymclasses.each do |gymclass| %>
+<p><%= gymclass.class_name %></p>
+<p><%= gymclass.class_tier %></p>
+<p><%= gymclass.class_capacity %></p>
+<% end %>
