@@ -2,8 +2,7 @@ require_relative("../db/sql_runner.rb")
 
 class GymClass
 
-  attr_reader :class_capacity
-  attr_accessor :class_name, :class_tier
+  attr_accessor :class_name, :class_tier, :class_capacity
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -20,9 +19,15 @@ class GymClass
     @id = id.to_i
   end
 
-  def self.delete_all
+  def self.delete_all()
     sql = "DELETE FROM classes"
     SqlRunner.run(sql)
   end
-  
+
+  def update()
+    sql = "UPDATE classes SET (class_name, class_tier, class_capacity) = ($1, $2, $3) WHERE id = $4"
+    values = [@class_name, @class_tier, @class_capacity, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end

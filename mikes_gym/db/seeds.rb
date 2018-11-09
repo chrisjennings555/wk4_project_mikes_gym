@@ -21,3 +21,6 @@ gymclass2.save
 #
 # member1.member_type = "silver"
 # member1.update
+
+gymclass1.class_capacity = 15
+gymclass1.update
