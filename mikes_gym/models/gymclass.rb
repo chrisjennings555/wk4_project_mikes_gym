@@ -30,4 +30,17 @@ class GymClass
     SqlRunner.run(sql, values)
   end
 
+  def delete()
+    sql = "DELETE FROM classes WHERE id =$1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
+  def self.all()
+    sql = "SELECT * FROM classes"
+    gymclass_data = SqlRunner.run(sql)
+    result = gymclass_data.map {|gymclass| GymClass.new(gymclass)}
+    return result
+  end
+
 end

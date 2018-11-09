@@ -17,10 +17,3 @@ gymclass2 = GymClass.new({'class_name' => 'Circuits', 'class_tier' => 'silver', 
 
 gymclass1.save
 gymclass2.save
-# # member1.delete
-#
-# member1.member_type = "silver"
-# member1.update
-
-gymclass1.class_capacity = 15
-gymclass1.update
