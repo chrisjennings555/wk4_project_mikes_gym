@@ -1,5 +1,5 @@
 require_relative("../models/member")
-require_relative("../models/class")
+require_relative("../models/gymclass")
 
 Member.delete_all
 
@@ -11,3 +11,6 @@ member2 = Member.new({'first_name' => 'Mike', 'last_name' => 'Monteith', 'wallet
 member1.save
 member2.save
 # member1.delete
+
+member1.member_type = "silver"
+member1.update

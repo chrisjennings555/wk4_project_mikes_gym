@@ -2,7 +2,8 @@ require_relative("../db/sql_runner.rb")
 
 class Member
 
-  attr_reader
+  attr_reader :first_name, :last_name
+  attr_accessor :member_type, :wallet
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -27,7 +28,7 @@ class Member
 
   def update()
     sql = "UPDATE members SET (first_name, last_name, wallet, member_type) = ($1, $2, $3, $4) WHERE id = $5"
-    values = [@first_name, @last_name, @wallet, @member_type]
+    values = [@first_name, @last_name, @wallet, @member_type, @id]
     SqlRunner.run(sql, values)
   end
 
