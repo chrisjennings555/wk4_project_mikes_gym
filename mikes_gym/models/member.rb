@@ -2,8 +2,8 @@ require_relative("../db/sql_runner.rb")
 
 class Member
 
-  attr_reader :first_name, :last_name, :id
-  attr_accessor :member_type, :wallet
+  attr_reader :id
+  attr_accessor :member_type, :wallet, :first_name, :last_name
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
