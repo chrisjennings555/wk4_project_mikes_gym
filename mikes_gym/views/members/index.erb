@@ -1,7 +1,6 @@
 <h1> Members </h1>
 <a href="members/new">Add a New Member</a>
 <% @members.each do |member| %>
-<p><%= member.first_name %></p>
-<p><%= member.last_name %></p>
-<p><%= member.member_type %></p>
+<p>Name: <%= member.pretty_name %></p>
+<a href="members/<%= member.id %>">View Member Details</a>
 <% end %>
