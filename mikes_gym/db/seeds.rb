@@ -1,8 +1,11 @@
 require_relative("../models/member")
 require_relative("../models/gymclass")
+require_relative("../models/booking")
 
+Booking.delete_all
 Member.delete_all
 GymClass.delete_all
+
 
 member1 = Member.new({'first_name' => 'Chris', 'last_name' => 'Jennings', 'wallet' => 10, 'member_type' => 'gold'})
 
@@ -17,3 +20,10 @@ gymclass2 = GymClass.new({'class_name' => 'Circuits', 'class_tier' => 'silver', 
 
 gymclass1.save
 gymclass2.save
+
+booking1 = Booking.new({'member_id' => member1.id, "class_id" => gymclass1.id})
+booking2 = Booking.new({'member_id' => member2.id, "class_id" => gymclass2.id})
+
+booking1.save
+booking2.save
+p booking1.class

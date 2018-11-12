@@ -2,6 +2,7 @@ require_relative("../db/sql_runner.rb")
 
 class GymClass
 
+  attr_reader :id
   attr_accessor :class_name, :class_tier, :class_capacity
 
   def initialize(options)

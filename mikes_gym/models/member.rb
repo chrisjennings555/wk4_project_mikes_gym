@@ -2,7 +2,7 @@ require_relative("../db/sql_runner.rb")
 
 class Member
 
-  attr_reader :first_name, :last_name
+  attr_reader :first_name, :last_name, :id
   attr_accessor :member_type, :wallet
 
   def initialize(options)
@@ -44,5 +44,9 @@ class Member
     result = member_data.map {|member| Member.new(member)}
     return result
   end
+
+  def pretty_name
+    return "#{@first_name.capitalize} #{@last_name.capitalize}"
+  end 
 
 end
