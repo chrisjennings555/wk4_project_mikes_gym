@@ -55,14 +55,19 @@ class GymClass
     @class_name
   end
 
-  def get_member_at_class()
+  def get_members_at_class()
     sql = "SELECT members.* FROM members
     INNER JOIN bookings
     ON bookings.member_id = members.id
     WHERE class_id = $1"
     values = [@id]
-    member = SqlRunner.run(sql, values)
-    return Member.new(member.first)
+    members = SqlRunner.run(sql, values)
+    result = members.map {|member| Member.new(member)}
+    return result
+  end
+
+  def get_members_at_class__pretty_names()
+    get_members_at_class.each {|member| member.pretty_name}
   end
 
 end

@@ -29,8 +29,10 @@ gymclass2.save
 
 booking1 = Booking.new({'member_id' => member1.id, "class_id" => gymclass1.id})
 booking2 = Booking.new({'member_id' => member2.id, "class_id" => gymclass2.id})
+booking3 = Booking.new({'member_id' => member3.id, "class_id" => gymclass1.id})
 
 booking1.save
 booking2.save
+booking3.save
 
-p gymclass1.get_member_at_class.first_name
+gymclass1.get_members_at_class__pretty_names
