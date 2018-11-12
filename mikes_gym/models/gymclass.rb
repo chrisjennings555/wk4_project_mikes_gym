@@ -44,4 +44,15 @@ class GymClass
     return result
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM classes  WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    return GymClass.new(result.first)
+  end
+
+  def class_name()
+    @class_name
+  end
+
 end

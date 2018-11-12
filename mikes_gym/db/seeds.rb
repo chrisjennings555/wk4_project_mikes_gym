@@ -26,4 +26,3 @@ booking2 = Booking.new({'member_id' => member2.id, "class_id" => gymclass2.id})
 
 booking1.save
 booking2.save
-p booking1.class

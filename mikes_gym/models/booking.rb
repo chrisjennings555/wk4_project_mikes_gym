@@ -44,14 +44,11 @@ class Booking
     return result
   end
 
-  def member_at_class()
-    sql = "SELECT members.first_name, members.last_name, classes.class_name FROM members
-    INNER JOIN bookings
-    ON bookings.member_id = members.id
-    INNER JOIN classes
-    ON classes.id = bookings.class_id"
-    datas = SqlRunner.run(sql)
-    return datas.map {|info| info}
+  def self.find(id)
+    sql = "SELECT * FROM bookings WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+  return Booking.new(result.first)
   end
 
   def member()
