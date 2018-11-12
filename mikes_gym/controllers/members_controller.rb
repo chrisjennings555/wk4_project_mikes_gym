@@ -37,6 +37,6 @@ end
 
 post '/members/:id/delete' do
   member = Member.find(params['id'])
-  member.delete
+  member.delete()
   redirect to "/members"
 end

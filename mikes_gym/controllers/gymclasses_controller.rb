@@ -43,8 +43,8 @@ post '/gymclasses/:id' do
 end
 
 #DELETE
-post 'gymclasses/:id/delete' do
+post '/gymclasses/:id/delete' do
   gymclass = GymClass.find(params['id'])
   gymclass.delete
   redirect to "/gymclasses"
-end 
+end

@@ -19,6 +19,6 @@ CREATE TABLE classes(
 
 CREATE TABLE bookings(
   id SERIAL8 primary key,
-  member_id INT8 REFERENCES members(id),
-  class_id INT8 REFERENCES classes(id)
+  member_id INT8 REFERENCES members(id) ON DELETE CASCADE,
+  class_id INT8 REFERENCES classes(id) ON DELETE CASCADE
 );

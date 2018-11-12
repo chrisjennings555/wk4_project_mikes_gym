@@ -55,4 +55,14 @@ class GymClass
     @class_name
   end
 
+  def get_member_at_class()
+    sql = "SELECT members.* FROM members
+    INNER JOIN bookings
+    ON bookings.member_id = members.id
+    WHERE class_id = $1"
+    values = [@id]
+    member = SqlRunner.run(sql, values)
+    return Member.new(member.first)
+  end
+
 end

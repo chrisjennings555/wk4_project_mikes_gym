@@ -1,1 +1,6 @@
-<h2> <%= @gymclass.class_name %> </h2>
+<h2>Class Details</h2>
+<p>Class Name: <%=@gymclass.class_name%></p>
+<p>Class Tier: <%=@gymclass.class_tier.capitalize%></p>
+<p>Class Capacity: <%=@gymclass.class_capacity%></p>
+<a href="gymclasses/<%=@gymclass.id%>/edit">Edit Class</a>
+<form action="/gymclasses/<%=@gymclass.id%>/delete" method="POST"><input type="submit" value="Delete"></form>

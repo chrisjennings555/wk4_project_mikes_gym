@@ -2,6 +2,5 @@
 <a href="/gymclasses/new">Add a New Gym Class</a>
 <% @gymclasses.each do |gymclass| %>
 <p><%= gymclass.class_name %></p>
-<p><%= gymclass.class_tier %></p>
-<p><%= gymclass.class_capacity %></p>
+<a href="/gymclasses/<%=gymclass.id%>">View Class Details</a>
 <% end %>
