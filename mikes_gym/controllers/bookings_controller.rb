@@ -22,3 +22,8 @@ post '/bookings' do
   booking.save
   redirect to "/bookings"
 end
+
+get '/bookings/:id' do
+  booking = Booking.find(params['id'])
+  erb(:"/bookings/show")
+end 

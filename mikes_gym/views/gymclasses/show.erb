@@ -2,6 +2,11 @@
 <p>Class Name: <%=@gymclass.class_name%></p>
 <p>Class Tier: <%=@gymclass.class_tier.capitalize%></p>
 <p>Class Capacity: <%=@gymclass.class_capacity%></p>
-<p>Members Attending Class: <%=@gymclass.get_members_at_class__pretty_names%></p>
+
+
+<%for member in @members_at_class %>
+<p>Attending Member: <%= member.pretty_name %> </p>
+<%end%>
+
 <a href="gymclasses/<%=@gymclass.id%>/edit">Edit Class</a>
 <form action="/gymclasses/<%=@gymclass.id%>/delete" method="POST"><input type="submit" value="Delete"></form>

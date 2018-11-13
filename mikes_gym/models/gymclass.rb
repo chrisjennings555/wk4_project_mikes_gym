@@ -1,4 +1,5 @@
 require_relative("../db/sql_runner.rb")
+require_relative("./member.rb")
 
 class GymClass
 
@@ -62,12 +63,8 @@ class GymClass
     WHERE class_id = $1"
     values = [@id]
     members = SqlRunner.run(sql, values)
-    result = members.map {|member| Member.new(member)}
-    return result
-  end
-
-  def get_members_at_class__pretty_names()
-    get_members_at_class.each {|member| member.pretty_name}
+    member_data = members.map {|member| Member.new(member)}
+    return member_data
   end
 
 end

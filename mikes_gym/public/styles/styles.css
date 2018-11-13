@@ -1,0 +1,28 @@
+body {
+  background: black url('/images/arnold.jpg');
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: monospace;
+}
+
+a {
+  color: white;
+  font-size: 2em;
+}
+
+h1 {
+  font-size: 7em;
+  padding: 5px;
+  color: gold;
+}
+
+p {
+  color: white;
+  font-size: 2em;
+}
+
+h2 {
+  color: gold;
+  font-size: 3em;
+}

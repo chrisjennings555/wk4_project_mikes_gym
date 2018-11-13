@@ -1,7 +1,6 @@
-<h1>Bookings</h1>
+<h2>Bookings</h2>
 <a href="/bookings/new">Add a New Booking</a>
 <% @bookings.each do |booking| %>
-<p><%=booking.member.first_name%></p>
-<p><%=booking.member.last_name%></p>
+<p><%=booking.member.pretty_name%></p>
 <p><%=booking.class.class_name%></p>
 <%end%>

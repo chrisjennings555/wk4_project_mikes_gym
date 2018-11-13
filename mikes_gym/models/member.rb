@@ -56,4 +56,12 @@ class Member
     return "#{@first_name.capitalize} #{@last_name.capitalize}"
   end
 
+  def get_class_attended_by_member
+    sql = "SELECT classes.* FROM classes INNER JOIN bookings ON bookings.class_id = classes.id WHERE member_id = $1"
+    values = [@id]
+    classes = SqlRunner.run(sql, values)
+    class_data = classes.map {|gymclass| GymClass.new(gymclass)}
+    return class_data
+  end
+  
 end

@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en-GB">
   <head>
-    <base href="/">
     <meta charset="utf-8">
-    <title>Mike's Gym</title>
+    <title>MIKE'S GYM</title>
+    <link rel="icon" href="/images/dumbbell.png" />
+    <link rel="stylesheet" href="/styles/styles.css" type="text/css" />
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/members">Members</a>
-    <a href="/gymclasses">Classes</a>
-    <a href="/bookings">Bookings</a>
-    <section id="content">
-<%= yield %>
-</section>
+    <header>
+      <h1>MIKE'S GYM</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/members">Members</a></li>
+        <li><a href="/gymclasses">Classes</a></li>
+        <li><a href="/bookings">Bookings</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+      <%= yield %>
+      </section>
+    </main>
+    <footer>
+      <h6 style="color:white;">MIKES GYM COPYRIGHT Chris Jennings 2018</h6>
+    </footer>
   </body>
 </html>

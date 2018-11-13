@@ -21,6 +21,7 @@ end
 
 get '/members/:id' do
   @member = Member.find(params["id"])
+  @class_attended_by_member = @member.get_class_attended_by_member
   erb(:'members/show')
 end
 

@@ -35,4 +35,4 @@ booking1.save
 booking2.save
 booking3.save
 
-gymclass1.get_members_at_class__pretty_names
+p member1.get_class_attended_by_member
