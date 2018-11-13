@@ -24,6 +24,8 @@ post '/bookings' do
 end
 
 get '/bookings/:id' do
-  booking = Booking.find(params['id'])
+  @booking = Booking.find(params['id'])
+  @member_at_booking = @booking.member
+  @class_at_booking = @booking.class 
   erb(:"/bookings/show")
-end 
+end
