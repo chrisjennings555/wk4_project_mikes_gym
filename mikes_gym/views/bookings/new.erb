@@ -1,7 +1,8 @@
 <h2>Add a New Booking</h2>
 
-<form action="bookings" method="POST">
+<form method="POST" action="/bookings">
 
+<div class="form-gen">
   <label>Select a Member:
     <select name="member_id">
       <% for member in @members %>
@@ -9,7 +10,9 @@
       <%end%>
     </select>
   </label>
+</div>
 
+<div class="form-gen">
   <label>Select a Gym Class:
     <select name="class_id">
       <% for gymclass in @gymclasses %>
@@ -17,6 +20,7 @@
       <%end%>
     </select>
   </label>
+</div>
 
-  <input type="submit" value="Create Booking">
+  <input type="submit" value="Create Booking"/>
 </form>

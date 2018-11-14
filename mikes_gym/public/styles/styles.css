@@ -1,5 +1,5 @@
 body {
-  background: black url('/images/arnold.jpg');
+  background: black;
   background-size: 120%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -25,4 +25,34 @@ p {
 h2 {
   color: red;
   font-size: 3em;
+}
+
+#menu li {
+ list-style-type: none;
+ width: 5em;
+ text-align: center;
+ margin-left: -2.5em;
+}
+
+#menu a {
+ text-decoration: none;
+ color: black;
+ display: block;
+ background-color: #EEEEFF;
+ margin-bottom: 2px;
+ width: 7em;
+}
+
+#add-member-button a {
+ text-decoration: none;
+ color: white;
+ display: block;
+ background-color: green;
+ margin-bottom: 2px;
+ width: 12em;
+ text-align: center;
+}
+
+.form-gen {
+  color: white;
 }

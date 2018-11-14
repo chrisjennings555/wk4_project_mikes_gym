@@ -1,0 +1,26 @@
+<h2>Edit a Booking</h2>
+
+<form action="/bookings/<%=@booking.id %>" method="POST">
+
+<div class="form-gen">
+  <label>Select a Member:
+    <select name="member_id" selected="<%=@members.id%>">
+      <% for member in @members %>
+      <option value="<%= member.id %>"><%= member.pretty_name %></option>
+      <%end%>
+    </select>
+  </label>
+</div>
+
+<div class="form-gen">
+  <label>Select a Gym Class:
+    <select name="class_id" selected="<%=@gymclasses.id%>">
+      <% for gymclass in @gymclasses %>
+      <option value="<%= gymclass.id %>"><%= gymclass.class_name %></option>
+      <%end%>
+    </select>
+  </label>
+</div>
+
+  <input type="submit" value="Edit Booking">
+</form>

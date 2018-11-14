@@ -1,5 +1,7 @@
 <h2> Members </h2>
-<a href="members/new">Add a New Member</a>
+<div id = "add-member-button">
+  <a href="members/new">Add a New Member</a>
+</div>
 <% @members.each do |member| %>
 <p>Name: <%= member.pretty_name %></p>
 <a href="members/<%= member.id %>">View Member Details</a>
