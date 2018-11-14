@@ -6,5 +6,7 @@
 <% for gymclass in @class_attended_by_member %>
 <p>Booked into class: <%=gymclass.class_name%></p>
 <%end%>
+<div id="edit-button">
 <a href="/members/<%=@member.id%>/edit">Edit Member</a>
+</div>
 <form action="/members/<%= @member.id %>/delete" method="POST"><input type="submit" value="Delete"></form>

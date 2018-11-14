@@ -2,5 +2,7 @@
 <p>Member Name: <%=@member_at_booking.pretty_name%></p>
 <p>Member Type: <%=@member_at_booking.member_type.capitalize%></p>
 <p>Class Booked: <%=@class_at_booking.class_name%></p>
+<div id="edit-button">
 <a href="/bookings/<%=@booking.id%>/edit">Edit Booking</a>
+</div>
 <form action="/bookings/<%=@booking.id%>/delete" method="POST"><input type="submit" value="Delete"></form>

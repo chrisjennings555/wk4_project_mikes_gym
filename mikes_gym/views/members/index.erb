@@ -1,8 +1,10 @@
 <h2> Members </h2>
-<div id = "add-member-button">
+<div id = "add-button">
   <a href="members/new">Add a New Member</a>
 </div>
 <% @members.each do |member| %>
 <p>Name: <%= member.pretty_name %></p>
+<div id = "view-button">
 <a href="members/<%= member.id %>">View Member Details</a>
+</div>
 <% end %>
