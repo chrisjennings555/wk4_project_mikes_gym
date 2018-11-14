@@ -7,7 +7,10 @@ body {
 
 a {
   text-decoration: none;
+}
 
+h2 {
+  color: red;
 }
 
 #container {
@@ -41,7 +44,7 @@ a {
 #nav a {
    text-decoration: none;
    color: black;
-   display: flex;
+   display: block;
    background-color: #EEEEFF;
    margin-bottom: 2px;
    width: 7em;
@@ -52,13 +55,14 @@ a {
   background-color: transparent;
   width: 600px;
   float: right;
+  margin-bottom: 100px;
 }
 
 
 #footer {
     position: fixed;
     height: 50px;
-    background-color: black;
+    background-color: transparent;
     bottom: 0px;
     left: 0px;
     right: 0px;
