@@ -1,10 +1,12 @@
 <h2>Classes</h2>
 <div id ="add-button">
-<a href="/gymclasses/new">Add a New Gym Class</a>
+  <a href="/gymclasses/new">Add a New Gym Class</a>
 </div>
 <% @gymclasses.each do |gymclass| %>
+<div id="ref-object">
 <p><%= gymclass.class_name %></p>
 <div id ="view-button">
-<a href="/gymclasses/<%=gymclass.id%>">View Class Details</a>
+  <a href="/gymclasses/<%=gymclass.id%>">View Class Details</a>
+</div>
 </div>
 <% end %>

@@ -1,8 +1,9 @@
 body {
-  background: black url('/images/arnold.jpg');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  font-family: monospace;
+  /* background: black url('/images/arnold.jpg'); */
+  background-color: grey;
+  /* background-size: 100%;
+  background-repeat: no-repeat; */
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -22,9 +23,23 @@ h2 {
 
 #header {
   color: gold;
-  font-family: monospace;
   padding: 10px;
   font-size: 2em;
+}
+
+#ref-object {
+  border-style: solid;
+  border-width: 2px;
+  border-color: gold;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  background-color: darkgrey;
+}
+
+#booking-objects {
+  display: flex;
+  flex-direction: row;
 }
 
 #content {
@@ -52,9 +67,8 @@ h2 {
 }
 
 #main {
-  background-color: transparent;
-  width: 600px;
-  float: right;
+  display: flex;
+  flex-direction: row;
   margin-bottom: 100px;
 }
 
@@ -80,16 +94,18 @@ h2 {
  margin-bottom: 2px;
  width: 12em;
  text-align: center;
+ border-radius: 3px;
 }
 
 #view-button a {
   text-decoration: none;
   color: white;
   display: block;
-  background-color: grey;
+  background-color: darkblue;
   margin-bottom: 2px;
   width: 12em;
   text-align: center;
+  border-radius: 3px;
 }
 
 #edit-button a {
@@ -100,4 +116,5 @@ h2 {
   margin-bottom: 2px;
   width: 12em;
   text-align: center;
+  border-radius: 3px;
 }

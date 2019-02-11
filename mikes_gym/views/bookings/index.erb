@@ -1,11 +1,15 @@
 <h2>Bookings</h2>
 <div id="add-button">
-<a href="/bookings/new">Add a New Booking</a>
+  <a href="/bookings/new">Add a New Booking</a>
 </div>
-<% @bookings.each do |booking| %>
-<p>Member Name: <%=booking.member.pretty_name%></p>
-<p>Class Booked: <%=booking.class.class_name%></p>
-<div id="view-button">
-<a href="/bookings/<%=booking.id%>">View Booking Details</a>
-<%end%>
-</div>
+  <% @bookings.each do |booking| %>
+  <div id="booking-objects">
+    <div id="ref-object">
+      <p>Member Name: <%= booking.member.pretty_name %> </p>
+      <p>Class Booked: <%= booking.class.class_name %></p>
+      <div id="view-button">
+        <a href="/bookings/<%= booking.id %>">View Booking Details</a>
+      </div>
+    </div>
+  </div>
+  <%end%>

@@ -3,8 +3,10 @@
   <a href="members/new">Add a New Member</a>
 </div>
 <% @members.each do |member| %>
-<p>Name: <%= member.pretty_name %></p>
-<div id = "view-button">
-<a href="members/<%= member.id %>">View Member Details</a>
+<div id="ref-object">
+  <p>Name: <%= member.pretty_name %></p>
+  <div id = "view-button">
+    <a href="members/<%= member.id %>">View Member Details</a>
+  </div>
 </div>
 <% end %>
