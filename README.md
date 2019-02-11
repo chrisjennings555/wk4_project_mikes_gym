@@ -25,3 +25,9 @@ The app should allow the gym to create / edit / delete classes
 The app should allow the gym to add members to specific classes
 The app should show a list of all upcoming classes
 The app should show all members that are registered for a particular class
+
+# TO RUN THE PROGRAM
+
+to start running the connection ruby app.rb
+
+in your browser url go to http://localhost:4567
